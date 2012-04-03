@@ -1,6 +1,7 @@
 #!/bin/bash
 if [[ TARGET_REMOTE -eq 1 ]]; then
-	ssh -p $THEOS_DEVICE_PORT root@$THEOS_DEVICE_IP "$*"
+#	ssh -p $THEOS_DEVICE_PORT root@$THEOS_DEVICE_IP "$*"
+	ssh $THEOS_DEVICE_ALIAS "$*"
 else
 	$*
 fi
